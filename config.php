@@ -6,4 +6,4 @@ mb_internal_encoding("UTF-8");
 define('DB_HOST', '127.0.0.1');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_DATABASE', 'live_video');
+define('DB_DATABASE', 'video_site');
