@@ -11,7 +11,7 @@ live-video-site
 
 ```
 use video_site;
-use names utf8;
+set names utf8;
 source path/to/video_site.sql; /* video_site.sql文件在项目根目录sql文件夹下 */
 ```
 
