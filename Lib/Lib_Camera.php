@@ -14,7 +14,7 @@ class Lib_Camera extends Lib_Base{
 			'key' => 'id',
 			'table' => 'Camera',
 			'columns' => [
-				'id' => 'id',
+				'id' => 'ID',
 				'description' => 'description',
 				'ip' => 'ip',
 				'port' => 'Port',
