@@ -6,7 +6,7 @@
  * Time: 上午8:43
  */
 
-class Channel extends Base{
+class Lib_Channel extends Lib_Base{
 	public $id, $name, $description, $image, $available, $merchantId;
 
 	public function __construct() {
@@ -26,7 +26,7 @@ class Channel extends Base{
 	}
 
 	public function cameras() {
-		$camera = new Camera();
+		$camera = new Lib_Camera();
 		$camera->channelId = $this->id;
 		return $camera->find();
 	}

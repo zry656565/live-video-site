@@ -6,10 +6,7 @@
  * Time: 上午8:46
  */
 
-
-require_once("Lib_Base.php");
-
-class Camera extends Base{
+class Lib_Camera extends Lib_Base{
 	public $id, $description, $ip, $port, $available, $channelId;
 
 	public function __construct() {
@@ -29,7 +26,7 @@ class Camera extends Base{
 	}
 
 	public function channel() {
-		$channel = new Channel();
+		$channel = new Lib_Channel();
 		$channel->id = $this->channelId;
 		return $channel->load();
 	}

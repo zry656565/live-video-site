@@ -1,5 +1,4 @@
 <?php
-require_once("../config.php");
 
 class DataConnection {
 	private static $connection = null;
@@ -14,7 +13,7 @@ class DataConnection {
 	}
 }
 
-class Base {
+class Lib_Base {
 	public $key, $table, $columns;
 
 	public function init($options) {
@@ -63,5 +62,11 @@ class Base {
 			$row = mysql_fetch_array($rs);
 		}
 		return $result;
+	}
+
+	public function link() {
+		$class = preg_replace('/Lib_(.*)/', '$1', get_class($this));
+		$key = $this->key;
+		return strtolower($class).".php?{$this->key}={$this->$key}";
 	}
 }

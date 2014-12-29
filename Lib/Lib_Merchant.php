@@ -6,7 +6,7 @@
  * Time: 上午8:38
  */
 
-class Merchant extends Base{
+class Lib_Merchant extends Lib_Base{
 	public $id, $name, $email, $address;
 
 	public function __construct() {
@@ -14,7 +14,7 @@ class Merchant extends Base{
 			'key' => 'id',
 			'table' => 'Merchant',
 			'columns' => [
-				'id' => 'id',
+				'id' => 'ID',
 				'name' => 'name',
 				'email' => 'email',
 				'address' => 'address',
@@ -24,7 +24,7 @@ class Merchant extends Base{
 	}
 
 	public function channels() {
-		$channel = new Channel();
+		$channel = new Lib_Channel();
 		$channel->merchantId = $this->id;
 		return $channel->find();
 	}
