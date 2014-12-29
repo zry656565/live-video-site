@@ -24,7 +24,7 @@ class Lib_Base {
 
 	public function load($id = null) {
 		$key = $this->key;
-		if ($id = null) {
+		if ($id === null) {
 			$id = $this->$key;
 		}
 		DataConnection::getConnection();

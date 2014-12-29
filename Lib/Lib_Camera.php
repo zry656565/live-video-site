@@ -12,7 +12,7 @@ class Lib_Camera extends Lib_Base{
 	public function __construct() {
 		$options = [
 			'key' => 'id',
-			'table' => 'Channel',
+			'table' => 'Camera',
 			'columns' => [
 				'id' => 'id',
 				'description' => 'description',
