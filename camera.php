@@ -1,10 +1,23 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+<?php require_once(dirname(__FILE__) . "/includes/base.php"); ?>
 <?php
-require_once(dirname(__FILE__) . "/includes/base.php");
-
 $camera = new Lib_Camera();
 $camera = $camera->load($_GET['id']);
-
-echo '<h1>'.$camera->description .'</h1>';
 ?>
+
+<!doctype html>
+<html lang="zh">
+<?php include_once(SITE_ROOT . '/layouts/head.php') ?>
+<body>
+<?php include_once(SITE_ROOT . '/layouts/header.php') ?>
+
+<div class="container">
+	<div style="padding: 40px 15px;">
+		<?php
+		echo '<h1>'.$camera->description .'</h1>';
+		?>
+	</div>
+</div><!-- /.container -->
+
+<?php include_once(SITE_ROOT . '/layouts/footer.php') ?>
+</body>
+</html>
