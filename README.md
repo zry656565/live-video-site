@@ -17,3 +17,6 @@ source path/to/video_site.sql; /* video_site.sql文件在项目根目录sql文�
 
 ##目录结构：
 - /Lib: Model层
+- /Controller: Controller层
+- /layouts: 页面布局
+- /statics: 存储静态文件
