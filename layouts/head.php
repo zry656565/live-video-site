@@ -9,10 +9,10 @@
 	<title>视频直播系统</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="<?= STATIC_ROOT ?>/statics/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?= STATIC_ROOT ?>/statics/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-<!--	<link href="starter-template.css" rel="stylesheet">-->
+	<!-- Custom styles -->
+	<link href="<?= STATIC_ROOT ?>/statics/css/base.css?v=1.0.0" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>

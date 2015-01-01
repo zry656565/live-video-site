@@ -1,3 +1,3 @@
 <?php
 
-include("merchant.php");
+include("login.php");
