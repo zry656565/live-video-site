@@ -83,6 +83,7 @@ CREATE TABLE `Merchant` (
   `name` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
   `email` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
   `address` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
+  `owner_id` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -93,8 +94,34 @@ CREATE TABLE `Merchant` (
 
 LOCK TABLES `Merchant` WRITE;
 /*!40000 ALTER TABLE `Merchant` DISABLE KEYS */;
-INSERT INTO `Merchant` VALUES (1,'M1','jerry@g.com','Dongchuan Road'),(2,'M2','jerry@g.com','Dongchuan Road'),(3,'M3','jerry@g.com','Dongchuan Road');
+INSERT INTO `Merchant` VALUES (1,'M1','jerry@g.com','Dongchuan Road',2),(2,'M2','jerry@g.com','Dongchuan Road',4),(3,'M3','jerry@g.com','Dongchuan Road',0);
 /*!40000 ALTER TABLE `Merchant` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `User`
+--
+
+DROP TABLE IF EXISTS `User`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `User` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `type` varchar(45) NOT NULL DEFAULT 'user',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `User`
+--
+
+LOCK TABLES `User` WRITE;
+/*!40000 ALTER TABLE `User` DISABLE KEYS */;
+INSERT INTO `User` VALUES (1,'jerry','123456','admin'),(2,'terry','123456','merchant'),(3,'ferry','123456','user');
+/*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -106,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-29 20:43:57
+-- Dump completed on 2015-01-01 20:16:22
