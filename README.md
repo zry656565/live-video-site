@@ -1,9 +1,6 @@
 live-video-site
 ===============
 
-##NGINX
-- 本应用使用nginx作为服务器
-
 ##PHP
 - 要求版本：5.4+
 
