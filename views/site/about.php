@@ -6,11 +6,10 @@ $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>关于我们</h1>
 
     <p>
-        This is the About page. You may modify the following file to customize its content:
+        新世界视频直播系统为您提供最优质的服务。
     </p>
 
-    <code><?= __FILE__ ?></code>
 </div>

@@ -10,9 +10,9 @@ $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>后台管理系统</h1>
 
-    <p>Please fill out the following fields to login:</p>
+    <p>请填写登录名与密码，如果没有登陆账号，请联系管理员。</p>
 
     <?php $form = ActiveForm::begin([
         'id' => 'login-form',
@@ -29,11 +29,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $form->field($model, 'rememberMe', [
         'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-    ])->checkbox() ?>
+    ])->checkbox()->label('自动登录') ?>
 
     <div class="form-group">
         <div class="col-lg-offset-1 col-lg-11">
-            <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+            <?= Html::submitButton('登陆', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
         </div>
     </div>
 
