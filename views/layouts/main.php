@@ -36,6 +36,9 @@ AppAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => '首页', 'url' => ['/site/index']],
+                    ['label' => '商户', 'url' => ['/merchant/index']],
+                    ['label' => '频道', 'url' => ['/channel/index']],
+                    ['label' => '摄像头', 'url' => ['/camera/index']],
                     Yii::$app->user->isGuest ?
                         ['label' => '登陆', 'url' => ['/site/login']] :
                         ['label' => '登出 (' . Yii::$app->user->identity->username . ')',

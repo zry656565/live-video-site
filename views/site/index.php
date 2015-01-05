@@ -11,7 +11,12 @@ use yii\helpers\Url;
 
         <p class="lead">欢迎来到新世界视频直播系统的缤纷世界，敬请享受吧！</p>
 
-        <p><a class="btn btn-lg btn-success" href="<?= Url::to(['login']) ?>">现在登陆 &raquo;</a></p>
+        <?php if (Yii::$app->user->isGuest) { ?>
+            <p><a class="btn btn-lg btn-success" href="<?= Url::to(['login']) ?>">现在登陆 &raquo;</a></p>
+        <?php }
+        else { ?>
+            <p><a class="btn btn-lg btn-success" href="">欢迎，<?= Yii::$app->user->identity->username ?></a></p>
+        <?php } ?>
     </div>
 
     <div class="body-content">
