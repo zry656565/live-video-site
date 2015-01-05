@@ -1,6 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 $this->title = 'My Yii Application';
+
+use yii\helpers\Url;
 ?>
 <div class="site-index">
 
@@ -9,7 +11,7 @@ $this->title = 'My Yii Application';
 
         <p class="lead">欢迎来到新世界视频直播系统的缤纷世界，敬请享受吧！</p>
 
-        <p><a class="btn btn-lg btn-success" href="">现在登陆 &raquo;</a></p>
+        <p><a class="btn btn-lg btn-success" href="<?= Url::to(['login']) ?>">现在登陆 &raquo;</a></p>
     </div>
 
     <div class="body-content">
