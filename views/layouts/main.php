@@ -59,7 +59,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; Shanghai Jiao Tong University 2014-<?= date('Y') ?></p>
+            <p class="pull-left">&copy; 上海交通大学 RFID实验室 2014-<?= date('Y') ?></p>
         </div>
     </footer>
 

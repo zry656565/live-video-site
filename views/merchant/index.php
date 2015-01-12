@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Merchants';
+$this->title = '商户';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="merchant-index">
@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Merchant', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('创建商户', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
