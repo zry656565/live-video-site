@@ -1,3 +1,6 @@
+/* default
+=================================*/
+
 html,
 body {
     height: 100%;
@@ -88,4 +91,11 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+/* custom
+==============================*/
+
+.weak {
+    color: #ccc;
 }
