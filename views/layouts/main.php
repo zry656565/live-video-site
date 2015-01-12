@@ -32,19 +32,22 @@ AppAsset::register($this);
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
+            $items = [
+                ['label' => '首页', 'url' => ['/site/index']],
+            ];
+            if (!Yii::$app->user->isGuest) {
+                $items[] = ['label' => '商户', 'url' => ['/merchant/index']];
+                $items[] = ['label' => '频道', 'url' => ['/channel/index']];
+                $items[] = ['label' => '摄像头', 'url' => ['/camera/index']];
+                $items[] = ['label' => '登出 (' . Yii::$app->user->identity->username . ')',
+                    'url' => ['/site/logout'],
+                    'linkOptions' => ['data-method' => 'post']];
+            } else {
+                $items[] = ['label' => '登陆', 'url' => ['/site/login']];
+            }
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
-                    ['label' => '首页', 'url' => ['/site/index']],
-                    ['label' => '商户', 'url' => ['/merchant/index']],
-                    ['label' => '频道', 'url' => ['/channel/index']],
-                    ['label' => '摄像头', 'url' => ['/camera/index']],
-                    Yii::$app->user->isGuest ?
-                        ['label' => '登陆', 'url' => ['/site/login']] :
-                        ['label' => '登出 (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
-                ],
+                'items' => $items,
             ]);
             NavBar::end();
         ?>
