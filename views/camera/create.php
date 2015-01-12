@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Camera */
 
-$this->title = 'Create Camera';
-$this->params['breadcrumbs'][] = ['label' => 'Cameras', 'url' => ['index']];
+$this->title = '创建摄像头';
+$this->params['breadcrumbs'][] = ['label' => '摄像头', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="camera-create">

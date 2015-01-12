@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Cameras';
+$this->title = '摄像头';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="camera-index">
@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Camera', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('创建新的摄像头', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
