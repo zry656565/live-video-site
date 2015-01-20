@@ -451,6 +451,12 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
         }
     }
 
+    public function setAttributes($values) {
+        foreach ($values as $key => $value) {
+            $this->setAttribute($key, $value);
+        }
+    }
+
     /**
      * Returns the old attribute values.
      * @return array the old attribute values (name-value pairs)
