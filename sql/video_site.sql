@@ -39,7 +39,7 @@ CREATE TABLE `Camera` (
 
 LOCK TABLES `Camera` WRITE;
 /*!40000 ALTER TABLE `Camera` DISABLE KEYS */;
-INSERT INTO `Camera` VALUES (1,'第一个相机','127.0.0.1',65535,'',1),(2,'第二个','127.0.0.1',65535,'',1),(3,'呵呵3','127.0.0.1',65535,'',2),(4,'c4','127.0.0.1',65535,'',3),(5,'c5','127.0.0.1',65535,'',4),(6,'c6','127.0.0.1',65535,'',5),(7,'c7','127.0.0.1',65535,'',5),(8,'c8','127.0.0.1',65535,'',5),(9,'c9','127.0.0.1',65535,'',6);
+INSERT INTO `Camera` VALUES (1,'美食1号','127.0.0.1',65535,'',1),(2,'美食2号','127.0.0.1',65535,'',1),(3,'字画1号','127.0.0.1',65535,'',2),(4,'字画2号','127.0.0.1',65535,'',3),(5,'字画3号','127.0.0.1',65535,'',4),(6,'服务1号','127.0.0.1',65535,'',5),(7,'备用1号','127.0.0.1',65535,'',5);
 /*!40000 ALTER TABLE `Camera` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,7 +67,7 @@ CREATE TABLE `Channel` (
 
 LOCK TABLES `Channel` WRITE;
 /*!40000 ALTER TABLE `Channel` DISABLE KEYS */;
-INSERT INTO `Channel` VALUES (1,'channel1',NULL,NULL,'',1),(2,'channel 2',NULL,NULL,'',2),(3,'c2',NULL,NULL,'',2),(4,'m1c1',NULL,NULL,'',3),(5,'m1c2',NULL,NULL,'',3),(6,'m1c3',NULL,NULL,'\0',3);
+INSERT INTO `Channel` VALUES (1,'美食','美食介绍','','',1),(2,'男士服饰','','','',2),(3,'女士服饰','','','',2),(4,'古董字画','古董字画','','',2);
 /*!40000 ALTER TABLE `Channel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +94,7 @@ CREATE TABLE `Merchant` (
 
 LOCK TABLES `Merchant` WRITE;
 /*!40000 ALTER TABLE `Merchant` DISABLE KEYS */;
-INSERT INTO `Merchant` VALUES (1,'M123','jerry@g.com','Dongchuan Road',2),(2,'M2','jerry@g.com','Dongchuan Road',4),(3,'hj3','j@j.net','sjtu',3);
+INSERT INTO `Merchant` VALUES (1,'东方购物','east@163.net','上海市浦东新区陆家嘴路360号',1),(2,'快乐古董商','happy@gmail.com','上海市东川路800号',2),(3,'交大软件学院','se@sjtu.edu.cn','闵行区东川路800号软件学院3503',3);
 /*!40000 ALTER TABLE `Merchant` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-20 18:22:50
+-- Dump completed on 2015-01-20 18:32:56
