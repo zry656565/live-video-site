@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `Camera`;
 CREATE TABLE `Camera` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(200) DEFAULT NULL,
-  `ip` varchar(20) CHARACTER SET latin1 NOT NULL,
+  `ip` varchar(20) NOT NULL,
   `Port` int(11) NOT NULL,
   `available` bit(1) DEFAULT NULL,
   `Channel_Id` int(11) DEFAULT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `Camera` (
 
 LOCK TABLES `Camera` WRITE;
 /*!40000 ALTER TABLE `Camera` DISABLE KEYS */;
-INSERT INTO `Camera` VALUES (1,'第一个相机','127.0.0.1',65535,'',1),(2,'c2','127.0.0.1',65535,'',1),(3,'c3','127.0.0.1',65535,'',2),(4,'c4','127.0.0.1',65535,'',3),(5,'c5','127.0.0.1',65535,'',4),(6,'c6','127.0.0.1',65535,'',5),(7,'c7','127.0.0.1',65535,'',5),(8,'c8','127.0.0.1',65535,'',5),(9,'c9','127.0.0.1',65535,'',6);
+INSERT INTO `Camera` VALUES (1,'第一个相机','127.0.0.1',65535,'',1),(2,'第二个','127.0.0.1',65535,'',1),(3,'呵呵3','127.0.0.1',65535,'',2),(4,'c4','127.0.0.1',65535,'',3),(5,'c5','127.0.0.1',65535,'',4),(6,'c6','127.0.0.1',65535,'',5),(7,'c7','127.0.0.1',65535,'',5),(8,'c8','127.0.0.1',65535,'',5),(9,'c9','127.0.0.1',65535,'',6);
 /*!40000 ALTER TABLE `Camera` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,9 +52,9 @@ DROP TABLE IF EXISTS `Channel`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Channel` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
-  `description` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
-  `image` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `image` varchar(45) DEFAULT NULL,
   `available` bit(1) DEFAULT NULL,
   `Merchant_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -80,9 +80,9 @@ DROP TABLE IF EXISTS `Merchant`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Merchant` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
-  `email` varchar(45) CHARACTER SET latin1 DEFAULT NULL,
-  `address` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
   `owner_id` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
@@ -94,7 +94,7 @@ CREATE TABLE `Merchant` (
 
 LOCK TABLES `Merchant` WRITE;
 /*!40000 ALTER TABLE `Merchant` DISABLE KEYS */;
-INSERT INTO `Merchant` VALUES (1,'M1','jerry@g.com','Dongchuan Road',2),(2,'M2','jerry@g.com','Dongchuan Road',4),(3,'M3','jerry@g.com','Dongchuan Road',0);
+INSERT INTO `Merchant` VALUES (1,'M123','jerry@g.com','Dongchuan Road',2),(2,'M2','jerry@g.com','Dongchuan Road',4),(3,'hj3','j@j.net','sjtu',3);
 /*!40000 ALTER TABLE `Merchant` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-01 20:16:22
+-- Dump completed on 2015-01-20 18:22:50
