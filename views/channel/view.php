@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'description',
             'image',
             'available:boolean',
-            'Merchant_ID',
+            'merchant_id',
         ],
     ]) ?>
 

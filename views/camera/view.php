@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Camera */
 
-$this->title = $model->ID;
+$this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => '摄像头', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('修改', ['update', 'id' => $model->ID], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('删除', ['delete', 'id' => $model->ID], [
+        <?= Html::a('修改', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('删除', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => '你确定真的要删除这条纪录吗？',
@@ -28,12 +28,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'ID',
+            'id',
             'description',
             'ip',
-            'Port',
+            'port',
             'available:boolean',
-            'Channel_Id',
+            'channel_id',
         ],
     ]) ?>
 

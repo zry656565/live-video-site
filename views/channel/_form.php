@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'available')->checkbox() ?>
 
-    <?= $form->field($model, 'Merchant_ID')->textInput() ?>
+    <?= $form->field($model, 'merchant_id')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '创建' : '修改', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

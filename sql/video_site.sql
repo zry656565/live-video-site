@@ -23,13 +23,13 @@ DROP TABLE IF EXISTS `Camera`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Camera` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(200) DEFAULT NULL,
   `ip` varchar(20) NOT NULL,
-  `Port` int(11) NOT NULL,
+  `port` int(11) NOT NULL,
   `available` bit(1) DEFAULT NULL,
-  `Channel_Id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+  `channel_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -56,7 +56,7 @@ CREATE TABLE `Channel` (
   `description` varchar(100) DEFAULT NULL,
   `image` varchar(45) DEFAULT NULL,
   `available` bit(1) DEFAULT NULL,
-  `Merchant_ID` int(11) DEFAULT NULL,
+  `merchant_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -79,12 +79,12 @@ DROP TABLE IF EXISTS `Merchant`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Merchant` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
   `owner_id` int(11) NOT NULL,
-  PRIMARY KEY (`ID`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -133,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-20 18:32:56
+-- Dump completed on 2015-01-20 19:17:03

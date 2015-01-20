@@ -51,8 +51,6 @@ interface ActiveRecordInterface
      */
     public function setAttribute($name, $value);
 
-    public function setAttributes($values);
-
     /**
      * Returns a value indicating whether the record has an attribute with the specified name.
      * @param string $name the name of the attribute

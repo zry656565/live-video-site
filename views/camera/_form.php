@@ -12,17 +12,17 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'ID')->textInput() ?>
+    <?= $form->field($model, 'id')->textInput() ?>
 
     <?= $form->field($model, 'description')->textInput(['maxlength' => 200]) ?>
 
     <?= $form->field($model, 'ip')->textInput(['maxlength' => 20]) ?>
 
-    <?= $form->field($model, 'Port')->textInput() ?>
+    <?= $form->field($model, 'port')->textInput() ?>
 
     <?= $form->field($model, 'available')->checkbox() ?>
 
-    <?= $form->field($model, 'Channel_Id')->textInput() ?>
+    <?= $form->field($model, 'channel_id')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '创建' : '修改', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -22,12 +22,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'ID',
+            'id',
             'description',
             'ip',
-            'Port',
+            'port',
             'available:boolean',
-            // 'Channel_Id',
+            'channel_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
