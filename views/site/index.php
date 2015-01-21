@@ -12,20 +12,30 @@ use yii\helpers\Html;
 
         <p class="lead">欢迎来到新世界视频直播系统的缤纷世界，尽情享受吧！</p>
 
-        <?php if (Yii::$app->user->isGuest) { ?>
-            <p><a class="btn btn-lg btn-success" href="<?= Url::to(['login']) ?>">现在登陆 &raquo;</a></p>
-        <?php }
-        else { ?>
-            <p>欢迎，<?= Yii::$app->user->identity->username ?></p>
-        <?php } ?>
+<!--        --><?php //if (Yii::$app->user->isGuest) { ?>
+<!--            <p><a class="btn btn-lg btn-success" href="--><?//= Url::to(['login']) ?><!--">现在登陆 &raquo;</a></p>-->
+<!--        --><?php //}
+//        else { ?>
+<!--            <p>欢迎，--><?//= Yii::$app->user->identity->username ?><!--</p>-->
+<!--        --><?php //} ?>
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-12">
-                <?= Html::img(Url::to("@web/images/video.jpg", true),
-                    ['alt' => '视频直播演示图', 'style' => 'width:100%'])?>
+                <div id="banner" style="background-image: url(<?= Url::to("@web/images/video.jpg", true) ?>);
+                                        background-size: cover;
+                                        width: 100%;">
+                </div>
+                <script>
+                    var banner = document.getElementById('banner');
+                    var resize = function() {
+                        banner.style.height = window.innerHeight - 368 + 'px';
+                    };
+                    window.onresize = resize;
+                    resize();
+                </script>
             </div>
         </div>
 
