@@ -12,12 +12,7 @@ use yii\helpers\Html;
 
         <p class="lead">欢迎来到新世界视频直播系统的缤纷世界，尽情享受吧！</p>
 
-<!--        --><?php //if (Yii::$app->user->isGuest) { ?>
-<!--            <p><a class="btn btn-lg btn-success" href="--><?//= Url::to(['login']) ?><!--">现在登陆 &raquo;</a></p>-->
-<!--        --><?php //}
-//        else { ?>
-<!--            <p>欢迎，--><?//= Yii::$app->user->identity->username ?><!--</p>-->
-<!--        --><?php //} ?>
+        <?php //if (Yii::$app->user->isGuest) { ?>
     </div>
 
     <div class="body-content">
@@ -38,6 +33,5 @@ use yii\helpers\Html;
                 </script>
             </div>
         </div>
-
     </div>
 </div>
