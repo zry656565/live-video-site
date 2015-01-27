@@ -101,3 +101,9 @@ a.desc:after {
 .weak {
     color: #ccc;
 }
+
+@media all and (min-width:1200px) {
+    .container {
+        width: 970px;
+    }
+}
