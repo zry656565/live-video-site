@@ -34,6 +34,7 @@ AppAsset::register($this);
             ]);
             $items = [
                 ['label' => '首页', 'url' => ['/site/index']],
+                ['label' => '观看视频', 'url' => ['/video/show']],
             ];
             if (!Yii::$app->user->isGuest) {
                 $items[] = ['label' => '商户', 'url' => ['/merchant/index']];
